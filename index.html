@@ -1,52 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Teacher's Day Greeting</title>
-  <style>
-    /* --- Basic Page Style --- */
-    body {
-      background-color: #222;       /* dark background */
-      color: white;                 /* light text */
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Teacher's Day – Dwarika Sir</title>
+<style>
+  /* ---------- Base Page Styles ---------- */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-    /* --- Simple Center Card --- */
-    .card {
-      background-color: #333;       /* slightly lighter box */
-      width: 80%;
-      max-width: 500px;
-      margin: 100px auto;           /* center on page */
-      padding: 20px;
-      border-radius: 10px;          /* rounded corners */
-    }
+  /* ---------- Glass Card Container ---------- */
+  .card {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 25px;
+    padding: 50px 35px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
 
-    h1 {
-      color: #ffd700;               /* gold heading */
-      margin-bottom: 20px;
-    }
+  /* ---------- Gradient Heading ---------- */
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+  }
 
-    p {
-      font-size: 18px;
-      line-height: 1.5;
-    }
+  /* ---------- Divider ---------- */
+  .divider {
+    width: 70px;
+    height: 4px;
+    background-color: #fbc2eb;
+    margin: 15px auto 25px;
+    border-radius: 2px;
+  }
 
-    .signature {
-      margin-top: 20px;
-      font-style: italic;
-    }
-  </style>
+  /* ---------- Message ---------- */
+  p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 12px 0;
+  }
+
+  .signature {
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 1rem;
+    color: #ddd;
+  }
+
+  /* ---------- Soft Floating Circles ---------- */
+  .circle {
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 15%;
+    animation: float 15s infinite ease-in-out;
+    pointer-events: none;
+  }
+  .circle:nth-child(2) { width: 80px; height: 80px; top: 70%; left: 25%; animation-duration: 12s; }
+  .circle:nth-child(3) { width: 150px; height: 150px; top: 40%; left: 75%; animation-duration: 18s; }
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(15px); }
+    100% { transform: translateY(0) translateX(0); }
+  }
+
+  /* ---------- Responsive ---------- */
+  @media(max-width: 400px){
+    h1 { font-size: 2rem; }
+    .card { padding: 35px 25px; }
+  }
+</style>
 </head>
 <body>
 
+  <!-- Decorative Floating Circles -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <!-- Main Glass Card -->
   <div class="card">
     <h1>Happy Teacher's Day</h1>
+    <div class="divider"></div>
     <p>Dear <strong>Dwarika Sir</strong>,</p>
     <p>
-      Thank you for your guidance and support.  
-      Your teaching inspires us every day.
+      Thank you for guiding me through full-stack development and PHP.  
+      Your patience, encouragement, and teaching inspire me every day.
     </p>
     <p class="signature">— Subhrajeet</p>
   </div>
