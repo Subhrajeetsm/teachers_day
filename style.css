@@ -1,176 +1,409 @@
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+/* ==========================================
+   PURPLE & GOLD TEACHER'S DAY - PREMIUM STYLE
+   Mobile First • teachersday.me Ready
+============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500&family=Noto+Serif+Devanagari:wght@500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:18px;
+    font-family:"Poppins",sans-serif;
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at top,#6A1B9A,#2A0845 65%,#12021E);
+}
+
+/* Background Glow */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.28;
+    z-index:-1;
+}
+
+body::before{
+    top:-70px;
+    left:-70px;
+    background:#FFD54F;
+}
+
+body::after{
+    bottom:-90px;
+    right:-70px;
+    background:#FFB300;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    width:100%;
+    max-width:430px;
+    min-height:760px;
+
+    position:relative;
+    overflow:hidden;
+
+    padding:34px 24px;
+
+    border-radius:32px;
+
+    background:
+    linear-gradient(180deg,#7B1FA2,#5E1385,#35104F,#20052F);
+
+    border:2px solid rgba(255,215,0,.5);
+
+    box-shadow:
+    0 0 30px rgba(255,215,0,.18),
+    0 20px 60px rgba(0,0,0,.6);
+}
+
+/* Golden Inner Frame */
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border-radius:24px;
+    border:1.5px solid rgba(255,215,0,.45);
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:22px;
+    border-radius:18px;
+    border:1px dashed rgba(255,215,0,.2);
+}
+
+/* Decorative Corners */
+
+.corner{
+    position:absolute;
+    width:55px;
+    height:55px;
+    border:2px solid #FFD54F;
+}
+
+.tl{
+    top:12px;
+    left:12px;
+    border-right:none;
+    border-bottom:none;
+}
+
+.tr{
+    top:12px;
+    right:12px;
+    border-left:none;
+    border-bottom:none;
+}
+
+.bl{
+    bottom:12px;
+    left:12px;
+    border-right:none;
+    border-top:none;
+}
+
+.br{
+    bottom:12px;
+    right:12px;
+    border-left:none;
+    border-top:none;
+}
+
+/* Decorative Mandalas */
+
+.mandala{
+    position:absolute;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:1px dashed rgba(255,215,0,.15);
+    opacity:.35;
+}
+
+.m1{
+    top:-50px;
+    right:-60px;
+}
+
+.m2{
+    bottom:-60px;
+    left:-60px;
+}
+
+/* Floating Sparkles */
+
+.sparkle{
+    position:absolute;
+    color:#FFD54F;
+    opacity:.55;
+    animation:twinkle 4s infinite;
+}
+
+.s1{top:70px;left:35px;font-size:12px;}
+.s2{top:170px;right:35px;font-size:18px;}
+.s3{bottom:220px;left:45px;font-size:15px;}
+.s4{bottom:130px;right:45px;font-size:12px;}
+
+@keyframes twinkle{
+    0%,100%{opacity:.2;transform:scale(.8);}
+    50%{opacity:1;transform:scale(1.3);}
+}
+
+/* Top Icon */
+
+.top-icon{
+    text-align:center;
+    color:#FFD54F;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+/* Om Icon */
+
+.om-icon{
+    text-align:center;
+    color:#FFD54F;
+    font-size:58px;
+    text-shadow:0 0 18px gold;
+    animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.08);
+        text-shadow:0 0 30px gold;
     }
+}
+
+/* Sanskrit */
+
+.shloka{
+    margin-top:18px;
+    text-align:center;
+    font-family:"Noto Serif Devanagari",serif;
+    color:#FFF3C1;
+    font-size:21px;
+    line-height:1.9;
+    font-weight:700;
+}
+
+/* Divider */
+
+.divider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+    margin:24px 0;
+}
+
+.divider span{
+    width:70px;
+    height:1px;
+    background:#FFD54F;
+}
+
+.divider i{
+    color:#FFD54F;
+    font-size:18px;
+}
+
+/* Heading */
+
+h1{
+    text-align:center;
+    color:#FFF8E8;
+    font-family:"Cinzel",serif;
+    font-size:29px;
+    margin-bottom:20px;
+}
+
+/* Dear */
+
+.dear{
+    color:#FFD54F;
+    font-size:22px;
+    margin-bottom:12px;
+    font-family:"Great Vibes",cursive;
+}
+
+/* Message */
+
+.message{
+    text-align:center;
+    color:#F8F4F0;
+    font-size:15px;
+    line-height:1.9;
+}
+
+.message p{
+    margin-bottom:18px;
+}
+
+/* Closing */
+
+.closing{
+    text-align:center;
+    margin-top:24px;
+}
+
+.gratitude{
+    color:#FFD54F;
+    font-family:"Great Vibes",cursive;
+    font-size:30px;
+}
+
+.name{
+    margin-top:6px;
+    color:white;
+    font-size:30px;
+    font-family:"Great Vibes",cursive;
+}
+
+/* Footer */
+
+.footer{
+    margin-top:22px;
+    text-align:center;
+    color:#E9C46A;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+/* Diya */
+
+.diya{
+    position:absolute;
+    bottom:18px;
+    color:#FFC107;
+    font-size:32px;
+    animation:flicker 2s infinite alternate;
+}
+
+.diya-left{
+    left:20px;
+}
+
+.diya-right{
+    right:20px;
+}
+
+@keyframes flicker{
+    from{
+        transform:translateY(0);
+        filter:drop-shadow(0 0 5px gold);
+    }
+    to{
+        transform:translateY(-3px);
+        filter:drop-shadow(0 0 15px orange);
+    }
+}
+
+/* Mobile */
+
+@media (max-width:480px){
 
     body{
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:25px;
-      font-family:'Poppins',sans-serif;
-      background:
-        radial-gradient(circle at top,#7b4b20,#3b2212 70%);
+        padding:8px;
     }
 
     .card{
-      width:100%;
-      max-width:760px;
-      background:
-        radial-gradient(circle at top right,rgba(255,244,210,.55),transparent 35%),
-        radial-gradient(circle at bottom left,rgba(255,223,164,.28),transparent 40%),
-        #f6e7c8;
-      border:8px solid #5d3214;
-      border-radius:28px;
-      padding:45px 38px;
-      position:relative;
-      overflow:hidden;
-      box-shadow:0 20px 50px rgba(0,0,0,.55);
-    }
-
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:14px;
-      border:2px solid rgba(120,70,20,.35);
-      border-radius:20px;
-      pointer-events:none;
-    }
-
-    .corner{
-      position:absolute;
-      width:80px;
-      height:80px;
-      border:3px solid #8b5a2b;
-    }
-    .tl{top:14px;left:14px;border-right:none;border-bottom:none;border-radius:20px 0 0 0;}
-    .tr{top:14px;right:14px;border-left:none;border-bottom:none;border-radius:0 20px 0 0;}
-    .bl{bottom:14px;left:14px;border-right:none;border-top:none;border-radius:0 0 0 20px;}
-    .br{bottom:14px;right:14px;border-left:none;border-top:none;border-radius:0 0 20px 0;}
-
-    .mandala{
-      position:absolute;
-      width:180px;
-      height:180px;
-      border:1px dashed rgba(184,134,11,.22);
-      border-radius:50%;
-      opacity:.35;
-    }
-    .m1{top:50px;right:-70px;}
-    .m2{bottom:60px;left:-70px;}
-
-    .guru-section{
-      text-align:center;
-      margin:15px 0 25px;
+        max-width:100%;
+        min-height:auto;
+        padding:28px 18px;
+        border-radius:26px;
     }
 
     .om-icon{
-      font-size:56px;
-      color:#c28a12;
-      margin-bottom:18px;
-      text-shadow:0 0 15px rgba(255,215,0,.45);
+        font-size:48px;
     }
 
     .shloka{
-      font-family:"Noto Serif Devanagari",serif;
-      font-size:29px;
-      line-height:1.9;
-      color:#8b5a00;
-      font-weight:700;
-      text-shadow:1px 1px 2px rgba(255,215,120,.2);
-    }
-
-    .divider{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:16px;
-      margin:26px 0;
-    }
-
-    .divider span{
-      width:95px;
-      height:1.5px;
-      background:#b8860b;
-    }
-
-    .divider i{
-      color:#b8860b;
-      font-size:22px;
+        font-size:18px;
+        line-height:1.8;
     }
 
     h1{
-      text-align:center;
-      font-family:'Cinzel',serif;
-      color:#4d2410;
-      font-size:40px;
-      margin-bottom:30px;
-      letter-spacing:1px;
-    }
-
-    .dear{
-      font-family:'Tangerine',cursive;
-      font-size:30px;
-      color:#6d3513;
-      margin-bottom:10px;
+        font-size:24px;
     }
 
     .message{
-      text-align:center;
-      color:#4b2d19;
-      font-size:18px;
-      line-height:2;
-    }
-
-    .message p{
-      margin-bottom:22px;
-    }
-
-    .closing{
-      text-align:center;
-      margin-top:28px;
+        font-size:14px;
+        line-height:1.8;
     }
 
     .gratitude{
-      font-family:'Tangerine',cursive;
-      font-size:36px;
-      color:#7a4518;
+        font-size:28px;
     }
 
     .name{
-      font-family:'Tangerine',cursive;
-      font-size:44px;
-      color:#4d2410;
-      margin-top:8px;
+        font-size:25px;
     }
+}
 
-    .footer{
-      text-align:center;
-      margin-top:30px;
-      color:#8c6239;
-      font-size:14px;
-      letter-spacing:2px;
+
+/* Top Graduation Cap */
+.top-icon{
+    text-align:center;
+    font-size:40px;
+    color:#FFD54F;
+    margin-bottom:12px;
+}
+
+/* Inspirational Quote */
+.quote{
+    text-align:center;
+    color:#FFE8A3;
+    font-style:italic;
+    font-size:14px;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* Floating Sparkles */
+.sparkle{
+    position:absolute;
+    color:#FFD54F;
+    opacity:.6;
+    animation:twinkle 4s infinite;
+}
+
+.s1{top:70px;left:30px;font-size:12px;}
+.s2{top:160px;right:30px;font-size:16px;}
+.s3{bottom:220px;left:40px;font-size:14px;}
+.s4{bottom:140px;right:40px;font-size:12px;}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.8);
     }
-
-    .diya-left,.diya-right{
-      position:absolute;
-      bottom:20px;
-      font-size:42px;
-      color:#d89b1b;
-      filter:drop-shadow(0 0 8px gold);
+    50%{
+        opacity:1;
+        transform:scale(1.3);
     }
-
-    .diya-left{left:24px;}
-    .diya-right{right:24px;}
-
-    @media(max-width:600px){
-      .card{padding:28px 20px;}
-      .shloka{font-size:21px;line-height:1.8;}
-      h1{font-size:30px;}
-      .message{font-size:16px;line-height:1.9;}
-      .gratitude{font-size:30px;}
-      .name{font-size:36px;}
-      .om-icon{font-size:48px;}
-    }
+}
