@@ -1,0 +1,176 @@
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:25px;
+      font-family:'Poppins',sans-serif;
+      background:
+        radial-gradient(circle at top,#7b4b20,#3b2212 70%);
+    }
+
+    .card{
+      width:100%;
+      max-width:760px;
+      background:
+        radial-gradient(circle at top right,rgba(255,244,210,.55),transparent 35%),
+        radial-gradient(circle at bottom left,rgba(255,223,164,.28),transparent 40%),
+        #f6e7c8;
+      border:8px solid #5d3214;
+      border-radius:28px;
+      padding:45px 38px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 20px 50px rgba(0,0,0,.55);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:14px;
+      border:2px solid rgba(120,70,20,.35);
+      border-radius:20px;
+      pointer-events:none;
+    }
+
+    .corner{
+      position:absolute;
+      width:80px;
+      height:80px;
+      border:3px solid #8b5a2b;
+    }
+    .tl{top:14px;left:14px;border-right:none;border-bottom:none;border-radius:20px 0 0 0;}
+    .tr{top:14px;right:14px;border-left:none;border-bottom:none;border-radius:0 20px 0 0;}
+    .bl{bottom:14px;left:14px;border-right:none;border-top:none;border-radius:0 0 0 20px;}
+    .br{bottom:14px;right:14px;border-left:none;border-top:none;border-radius:0 0 20px 0;}
+
+    .mandala{
+      position:absolute;
+      width:180px;
+      height:180px;
+      border:1px dashed rgba(184,134,11,.22);
+      border-radius:50%;
+      opacity:.35;
+    }
+    .m1{top:50px;right:-70px;}
+    .m2{bottom:60px;left:-70px;}
+
+    .guru-section{
+      text-align:center;
+      margin:15px 0 25px;
+    }
+
+    .om-icon{
+      font-size:56px;
+      color:#c28a12;
+      margin-bottom:18px;
+      text-shadow:0 0 15px rgba(255,215,0,.45);
+    }
+
+    .shloka{
+      font-family:"Noto Serif Devanagari",serif;
+      font-size:29px;
+      line-height:1.9;
+      color:#8b5a00;
+      font-weight:700;
+      text-shadow:1px 1px 2px rgba(255,215,120,.2);
+    }
+
+    .divider{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      margin:26px 0;
+    }
+
+    .divider span{
+      width:95px;
+      height:1.5px;
+      background:#b8860b;
+    }
+
+    .divider i{
+      color:#b8860b;
+      font-size:22px;
+    }
+
+    h1{
+      text-align:center;
+      font-family:'Cinzel',serif;
+      color:#4d2410;
+      font-size:40px;
+      margin-bottom:30px;
+      letter-spacing:1px;
+    }
+
+    .dear{
+      font-family:'Tangerine',cursive;
+      font-size:30px;
+      color:#6d3513;
+      margin-bottom:10px;
+    }
+
+    .message{
+      text-align:center;
+      color:#4b2d19;
+      font-size:18px;
+      line-height:2;
+    }
+
+    .message p{
+      margin-bottom:22px;
+    }
+
+    .closing{
+      text-align:center;
+      margin-top:28px;
+    }
+
+    .gratitude{
+      font-family:'Tangerine',cursive;
+      font-size:36px;
+      color:#7a4518;
+    }
+
+    .name{
+      font-family:'Tangerine',cursive;
+      font-size:44px;
+      color:#4d2410;
+      margin-top:8px;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:30px;
+      color:#8c6239;
+      font-size:14px;
+      letter-spacing:2px;
+    }
+
+    .diya-left,.diya-right{
+      position:absolute;
+      bottom:20px;
+      font-size:42px;
+      color:#d89b1b;
+      filter:drop-shadow(0 0 8px gold);
+    }
+
+    .diya-left{left:24px;}
+    .diya-right{right:24px;}
+
+    @media(max-width:600px){
+      .card{padding:28px 20px;}
+      .shloka{font-size:21px;line-height:1.8;}
+      h1{font-size:30px;}
+      .message{font-size:16px;line-height:1.9;}
+      .gratitude{font-size:30px;}
+      .name{font-size:36px;}
+      .om-icon{font-size:48px;}
+    }
